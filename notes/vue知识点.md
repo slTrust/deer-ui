@@ -55,3 +55,31 @@ export default {
   }
 }
 ```
+
+### `<g-button>` 的click事件如何传递
+
+```
+// 调用的时候
+<g-button :loading="loading1" @click="loading1 = !loading1">
+ 
+// 组件内部
+<template>
+  <button @click="$emit('click')">
+  </button>
+</template> 
+
+// 等价于
+<template>
+  <button @click="xxx">
+  </button>
+</template> 
+<script>
+  export default {
+    method:{
+      xxx(){
+        this.$emit('click')    
+      }
+    }
+  }
+</script>
+```

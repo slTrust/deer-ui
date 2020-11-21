@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/slTrust/deer-ui/issues"
   },
-  "homepage": "https://github.com/slTrust/deer-ui#readme"
+  "homepage": "https://github.com/slTrust/deer-ui#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
 }

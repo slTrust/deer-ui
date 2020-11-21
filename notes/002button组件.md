@@ -5,3 +5,16 @@
     - 批量去色
     - 选择 symbol
     - 生成 js 然后就可以在你的项目里用
+
+
+### 如何让icon旋转
+
+```
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading{
+  animation: spin 2s infinite linear;
+}
+```

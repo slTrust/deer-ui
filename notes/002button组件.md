@@ -18,3 +18,27 @@
   animation: spin 2s infinite linear;
 }
 ```
+
+### 检测 button-group 的子元素是不是 button
+
+- mounted 里检查挂载元素
+
+```
+<template>
+  <div class="g-button-group">
+    <slot></slot>
+  </div>
+</template>
+<script>
+  export default {
+    mounted(){
+      for (let node of this.$el.children) {
+        let name = node.nodeName.toLowerCase()
+        if (name !== 'button') {
+          console.warn(`g-button-group 的子元素应该全是 g-button，但是你写的是 ${name}`)
+        }
+      }
+    }
+  }
+</script>
+```
